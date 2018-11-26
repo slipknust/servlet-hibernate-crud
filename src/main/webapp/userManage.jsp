@@ -37,7 +37,7 @@
             <div class="form-group">
                 <label for="senha" class="control-label col-xs-3">Senha:</label>
                 <div class="col-xs-9">
-                    <input type="number" name=""senha"" id=""senha"" class="form-control" value="${user.getSenha()}"
+                    <input type="number" name="senha" id="senha" class="form-control" value="${user.getSenha()}"
                            required="true"/>
                 </div>
             </div>
