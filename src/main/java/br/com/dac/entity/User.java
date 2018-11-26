@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "usuario")
 @Data
 @ToString
 public class User {
@@ -18,30 +18,20 @@ public class User {
     @Column
     private Integer id;
 
-    @Column(name = "first_name")
+    @Column(name = "nome")
     private String nome;
 
-    @Column(name = "last_name")
-    private String lastName;
-
-    @Column(name = "birth_date")
-    @Type(type="date")
-    private Date birthDate;
+    @Column(name = "cpf")
+    private int cpf;
+    
+    @Column
+    private String senha;
+    
+    @Column
+    private String email;
 
     @Column
-    private String organization;
-
-    @Column
-    private String phone;
-
-    public String getBirthDateString() {
-        if (this.getBirthDate() == null) {
-            return "";
-        }
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        return formatter.format(this.getBirthDate());
-    }
+    private String matricula;
 
 	public Integer getId() {
 		return id;
@@ -51,44 +41,45 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public int getCpf() {
+		return cpf;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
 	}
 
-	public Date getBirthDate() {
-		return birthDate;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getOrganization() {
-		return organization;
+	public String getMatricula() {
+		return matricula;
 	}
 
-	public void setOrganization(String organization) {
-		this.organization = organization;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getSenha() {
+		return senha;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
+	
 
 }

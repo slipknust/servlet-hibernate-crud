@@ -43,17 +43,17 @@ public class UsersManageServlet extends HttpServlet {
             user = new User();
         }
 
-        user.setFirstName(req.getParameter("firstName"));
-        user.setLastName(req.getParameter("lastName"));
-        user.setOrganization(req.getParameter("organization"));
-        user.setPhone(req.getParameter("phone"));
-        user.setBirthDate(Helper.requestParameterDate(req, "birthDate"));
+        user.setNome(req.getParameter("nome"));
+        user.setCpf(parseInt(req.getParameter("cpf")));
+        user.setEmail(req.getParameter("email"));
+        user.setMatricula(req.getParameter("matricula"));
+        user.setSenha(req.getParameter("senha"));
         if (
-                user.getFirstName() == null || user.getFirstName().length() == 0 ||
-                user.getLastName() == null || user.getLastName().length() == 0 ||
-                user.getBirthDate() == null  ||
-                user.getPhone() == null || user.getPhone().length() == 0 ||
-                user.getOrganization() == null || user.getOrganization().length() == 0) {
+                user.getNome() == null || user.getNome().length() == 0) { 
+               // user.getCpf() == null || user.getCpf().length() == 0 ||
+               // user.getSenha() == null  ||
+               // user.getMatricula() == null || user.getMatricula().length() == 0 ||
+                //user.getEmail() == null || user.getEmail().length() == 0) {
             req.setAttribute("user", user);
             req.setAttribute("error", "Invalid data");
             req.getRequestDispatcher("userManage.jsp").forward(req, resp);
@@ -63,4 +63,9 @@ public class UsersManageServlet extends HttpServlet {
         dao.save(user);
         resp.sendRedirect("/");
     }
+
+	private int parseInt(String parameter) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

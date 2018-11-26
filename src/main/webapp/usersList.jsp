@@ -23,11 +23,11 @@
                 <thead>
                 <tr>
                     <th>Id</th>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Birth Date</th>
-                    <th>Phone</th>
-                    <th>Organization</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <!-- <th>Birth Date</th> -->
+                    <th>Matricula</th>
+                    <th>E-mail</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -37,11 +37,10 @@
                 <c:forEach var="user" items="${users}">
                     <tr data-toggle="collapse" data-target="#tableuser${user.getId()}" class="accordion-toggle">
                         <td>${user.getId()}</td>
-                        <td>${user.getFirstName()}</td>
-                        <td>${user.getLastName()}</td>
-                        <td>${user.getBirthDateString()}</td>
-                        <td>${user.getPhone()}</td>
-                        <td>${user.getOrganization()}</td>
+                        <td>${user.getNome()}</td>
+                        <td>${user.getCpf()}</td>
+                        <td>${user.getMatricula()}</td>
+                        <td>${user.getEmail()}</td>
                         <td>
                             <a class="btn btn-default" href="/users?id=${user.getId()}">Edit</a>
                         </td>

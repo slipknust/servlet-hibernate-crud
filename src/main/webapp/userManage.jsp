@@ -21,39 +21,38 @@
                 </div>
             </c:if>
             <div class="form-group">
-                <label for="firstName" class="control-label col-xs-3">First Name:</label>
+                <label for="nome" class="control-label col-xs-3">Nome:</label>
                 <div class="col-xs-9">
-                    <input type="text" name="firstName" id="firstName" class="form-control"
-                           value="${user.getFirstName()}" required="true"/>
+                    <input type="text" name="nome" id="nome" class="form-control"
+                           value="${user.getNome()}" required="true"/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="lastName" class="control-label col-xs-3">Last name:</label>
+                <label for="cpf" class="control-label col-xs-3">CPF:</label>
                 <div class="col-xs-9">
-                    <input type="text" name="lastName" id="lastName" class="form-control" value="${user.getLastName()}"
+                    <input type="number" name="cpf" id="cpf" class="form-control" value="${user.getCpf()}"
                            required="true"/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="birthDate" class="control-label col-xs-3">Birth date:</label>
+                <label for="senha" class="control-label col-xs-3">Senha:</label>
                 <div class="col-xs-9">
-                    <input type="text" pattern="^\d{4}-\d{2}-\d{2}$" name="birthDate" id="birthDate"
-                           class="form-control"
-                           value="${user.getBirthDateString()}" maxlength="10" placeholder="2016-10-20" required="true"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="organization" class="control-label col-xs-3">Organization:</label>
-                <div class="col-xs-9">
-                    <input type="text" name="organization" id="organization" class="form-control"
-                           value="${user.getOrganization()}"
+                    <input type="number" name=""senha"" id=""senha"" class="form-control" value="${user.getSenha()}"
                            required="true"/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="phone" class="control-label col-xs-3">Phone:</label>
+                <label for="email" class="control-label col-xs-3">Email:</label>
                 <div class="col-xs-9">
-                    <input type="text" name="phone" id="phone" class="form-control" value="${user.getPhone()}"
+                    <input type="text" name="email" id="email" class="form-control"
+                           value="${user.getEmail()}"
+                           required="true"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="matricula" class="control-label col-xs-3">Matricula:</label>
+                <div class="col-xs-9">
+                    <input type="text" name="matricula" id="matricula" class="form-control" value="${user.getMatricula()}"
                            required="true"/>
                 </div>
             </div>
